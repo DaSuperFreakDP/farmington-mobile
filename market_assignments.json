@@ -1,4 +1,184 @@
 {
+    "Josh": {
+        "farmer": {
+            "id": 1,
+            "name": "Josh",
+            "strength": 1,
+            "handy": 7,
+            "stamina": 6,
+            "physical": 6,
+            "image": "/static/images/farmers/josh.png"
+        },
+        "role": "Fix Meiser"
+    },
+    "Zach": {
+        "farmer": {
+            "id": 2,
+            "name": "Zach",
+            "strength": 5,
+            "handy": 4,
+            "stamina": 8,
+            "physical": 8,
+            "image": "/static/images/farmers/zach.png"
+        },
+        "role": "Speed Runner"
+    },
+    "Tyler": {
+        "farmer": {
+            "id": 3,
+            "name": "Tyler",
+            "strength": 10,
+            "handy": 3,
+            "stamina": 8,
+            "physical": 10,
+            "image": "/static/images/farmers/tyler.jpg"
+        },
+        "role": "Lift Tender"
+    },
+    "Tyrone": {
+        "farmer": {
+            "id": 4,
+            "name": "Tyrone",
+            "strength": 4,
+            "handy": 7,
+            "stamina": 7,
+            "physical": 9,
+            "image": "/static/images/farmers/tyrone.png"
+        },
+        "role": "Fix Meiser"
+    },
+    "Luke": {
+        "farmer": {
+            "id": 5,
+            "name": "Luke",
+            "strength": 9,
+            "handy": 3,
+            "stamina": 6,
+            "physical": 7,
+            "image": "/static/images/farmers/luke.png"
+        },
+        "role": "Lift Tender"
+    },
+    "Vrock": {
+        "farmer": {
+            "id": 6,
+            "name": "Vrock",
+            "strength": 6,
+            "handy": 5,
+            "stamina": 5,
+            "physical": 6,
+            "image": "/static/images/farmers/vrock.png"
+        },
+        "role": "Lift Tender"
+    },
+    "Jared": {
+        "farmer": {
+            "id": 7,
+            "name": "Jared",
+            "strength": 5,
+            "handy": 8,
+            "stamina": 9,
+            "physical": 8,
+            "image": "/static/images/farmers/jared.png"
+        },
+        "role": "Speed Runner"
+    },
+    "Mezzy": {
+        "farmer": {
+            "id": 8,
+            "name": "Mezzy",
+            "strength": 8,
+            "handy": 9,
+            "stamina": 8,
+            "physical": 8,
+            "image": "/static/images/farmers/mezzy.png"
+        },
+        "role": "Fix Meiser"
+    },
+    "Morris": {
+        "farmer": {
+            "id": 9,
+            "name": "Morris",
+            "strength": 7,
+            "handy": 3,
+            "stamina": 4,
+            "physical": 5,
+            "image": "/static/images/farmers/morris.png"
+        },
+        "role": "Lift Tender"
+    },
+    "Hunter": {
+        "farmer": {
+            "id": 10,
+            "name": "Hunter",
+            "strength": 6,
+            "handy": 8,
+            "stamina": 6,
+            "physical": 6,
+            "image": "/static/images/farmers/hunter.png"
+        },
+        "role": "Fix Meiser"
+    },
+    "Nelson": {
+        "farmer": {
+            "id": 11,
+            "name": "Nelson",
+            "strength": 4,
+            "handy": 8,
+            "stamina": 4,
+            "physical": 7,
+            "image": "/static/images/farmers/nelson.png"
+        },
+        "role": "Fix Meiser"
+    },
+    "Dante": {
+        "farmer": {
+            "id": 12,
+            "name": "Dante",
+            "strength": 7,
+            "handy": 4,
+            "stamina": 5,
+            "physical": 7,
+            "image": "/static/images/farmers/dante.png"
+        },
+        "role": "Lift Tender"
+    },
+    "Christian": {
+        "farmer": {
+            "id": 13,
+            "name": "Christian",
+            "strength": 6,
+            "handy": 4,
+            "stamina": 5,
+            "physical": 9,
+            "image": "/static/images/farmers/christian.png"
+        },
+        "role": "Lift Tender"
+    },
+    "Marc-Anthony": {
+        "farmer": {
+            "id": 14,
+            "name": "Marc-Anthony",
+            "strength": 5,
+            "handy": 6,
+            "stamina": 4,
+            "physical": 6,
+            "image": "/static/images/farmers/marc.png"
+        },
+        "role": "Fix Meiser"
+    },
+    "Daniel": {
+        "farmer": {
+            "id": 15,
+            "name": "Daniel",
+            "strength": 5,
+            "handy": 4,
+            "stamina": 7,
+            "physical": 7,
+            "image": "/static/images/farmers/daniel.png"
+        },
+        "role": "Speed Runner"
+    },
     "Nick Rebello": {
         "farmer": {
             "id": 16,

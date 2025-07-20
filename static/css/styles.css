@@ -751,6 +751,39 @@ body {
   padding-right: 0.5rem;
 }
 
+/* Improved mobile navigation */
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+  min-width: 200px;
+  max-width: 90vw;
+  left: auto !important;
+  right: 0 !important;
+  top: 100% !important;
+  transform: none !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  }
+  
+  .navbar-collapse {
+    background-color: var(--bg-primary);
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+  }
+}
+
 /* Touch-friendly button sizing */
 .btn {
   min-height: 44px;
@@ -805,6 +838,65 @@ body {
   line-height: 1.4;
 }
 
+/* Compact farm view for mobile */
+.compact-farmer-card {
+  margin-bottom: 0.5rem;
+}
+
+.compact-farmer-card .card-body {
+  padding: 0.5rem;
+}
+
+.compact-farmer-card img {
+  height: 80px !important;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.compact-farmer-card .farmer-stats {
+  font-size: 0.75rem;
+}
+
+.compact-farmer-card .stat-value {
+  font-size: 0.9rem;
+}
+
+.compact-farmer-card .stat-label {
+  font-size: 0.6rem;
+}
+
+/* Side-by-side matchup layout */
+@media (min-width: 768px) {
+  .matchup-container {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .matchup-team {
+    flex: 1;
+  }
+  
+  .matchup-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .matchup-container {
+    display: block;
+  }
+  
+  .matchup-vs {
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
 /* Mobile navigation improvements */
 .navbar-nav .nav-link {
   padding: 0.75rem 1rem;
@@ -831,17 +923,38 @@ body {
   border-radius: 0.375rem;
 }
 
-/* Prevent zoom on iOS Safari */
+/* Prevent zoom on iOS Safari and fix mobile input issues */
 @supports (-webkit-touch-callout: none) {
   input[type="text"],
   input[type="password"],
   input[type="email"],
   input[type="number"],
-  textarea {
+  textarea,
+  .mobile-input-fix {
     font-size: 16px !important;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
+    -webkit-user-select: text;
+    -webkit-touch-callout: default;
   }
+}
+
+/* Mobile input stability fixes */
+.mobile-input-fix {
+  font-size: 16px !important;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.mobile-input-fix:focus {
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
+  outline: none;
+  border-color: var(--farmington-orange);
+  box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.25);
 }
 
 .form-label {
@@ -1183,6 +1296,43 @@ body {
   #install-banner,
   #ios-install-modal {
     display: none !important;
+  }
+}
+
+/* Mobile keyboard handling */
+.keyboard-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.keyboard-open .card-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+/* Compact stats for small screens */
+@media (max-width: 576px) {
+  .compact-farmer-card img {
+    height: 60px !important;
+    width: 60px !important;
+  }
+  
+  .compact-farmer-card .stat-value {
+    font-size: 0.8rem;
+  }
+  
+  .compact-farmer-card .stat-label {
+    font-size: 0.55rem;
+  }
+  
+  .farmer-stats .col-6 {
+    padding: 0.125rem;
   }
 }
 

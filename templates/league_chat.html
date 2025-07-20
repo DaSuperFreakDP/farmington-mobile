@@ -85,9 +85,13 @@
                             <form id="chat-form" class="d-flex">
                                 <input type="text" 
                                        id="message-input" 
-                                       class="form-control me-2" 
+                                       class="form-control me-2 mobile-input-fix" 
                                        placeholder="Type your message..." 
                                        maxlength="500"
+                                       autocomplete="off"
+                                       autocorrect="off"
+                                       autocapitalize="off"
+                                       spellcheck="false"
                                        required>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-paper-plane"></i>
