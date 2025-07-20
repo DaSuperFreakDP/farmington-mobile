@@ -1,0 +1,29 @@
+{
+    "ty": {
+        "story_message": "First,\nJosh was ready to work, but due to their previous injury they failed and collected no points.\nThen,\nVrock tried their best to Harvest tha Crops and he succeeded. I guess country girls DO make do. The cows mooed in approval!\nFinally,\nJared tried their best to Push Tha Car but the car didn't budge. Josh and Vrock were both very disappointed in Jared.\nDue to because he tried to arm wrestle a gangster cow and lost, Jared became injured and will miss 1 matchday(s).\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+        "catastrophe_message": "A devastating drought hit, ruining all crop-related work!",
+        "miss_days": {
+            "Josh": 0,
+            "Vrock": 0,
+            "Jared": 1
+        }
+    },
+    "jared": {
+        "story_message": "First,\nZach tried their best to Build Tha Fence but forgot to put up the posts first, so it's basically just a bunch of random boards lying on the ground. Fucking retard. Luke and Mezzy were both very disappointed in Zach.\nThen,\nLuke tried their best to Milk Tha Cow but the cow looked at him and said, 'Do i looked like the Dairy Queen to you'? Zach and Mezzy were both very disappointed in Luke.\nFinally,\nMezzy tried their best to Lift Tha Hay but the haybales got the best of them. Zach and Luke were both very disappointed in Mezzy.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+        "catastrophe_message": "A raging wildfire has forced all farmers to evacuate\u2014no work today!",
+        "miss_days": {
+            "Zach": 0,
+            "Luke": 0,
+            "Mezzy": 0
+        }
+    },
+    "bob": {
+        "story_message": "First,\nTyler tried their best to Build Tha Fence but instead created a barricade of disappointment and splinters. Tyrone and Morris were both very disappointed in Tyler.\nThen,\nTyrone tried their best to Harvest tha Crops but out came the children of the corn and prevented him from doing so. Tyler and Morris were both very disappointed in Tyrone.\nFinally,\nMorris tried their best to Shovel Tha Manure but now it's a 'scent-sational' disaster! Tyler and Tyrone were both very disappointed in Morris.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+        "catastrophe_message": "No catastrophe today!",
+        "miss_days": {
+            "Tyler": 0,
+            "Tyrone": 0,
+            "Morris": 0
+        }
+    }
+}
