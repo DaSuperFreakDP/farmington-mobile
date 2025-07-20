@@ -52,35 +52,70 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Prevent zoom on input focus for iOS
+    // Prevent zoom on input focus for iOS and ensure proper input handling
     if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
         document.addEventListener('touchstart', function(e) {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
                 e.target.style.fontSize = '16px';
+                e.target.style.webkitAppearance = 'none';
+                e.target.style.webkitBorderRadius = '0';
             }
         });
     }
+    
+    // Fix all input and textarea elements for mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const allInputs = document.querySelectorAll('input[type="text"], input[type="password"], input[type="email"], textarea, input[type="number"]');
+        allInputs.forEach(function(input) {
+            input.style.fontSize = '16px';
+            input.style.webkitAppearance = 'none';
+            input.style.webkitBorderRadius = '0';
+            input.setAttribute('autocomplete', 'off');
+            
+            // Prevent viewport zoom on focus
+            input.addEventListener('focus', function() {
+                this.style.fontSize = '16px';
+            });
+        });
+    });
     
     // Improve dropdown behavior on touch devices
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(function(toggle) {
         toggle.addEventListener('click', function(e) {
             // Ensure dropdown opens on first touch on mobile
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 992) {
                 e.preventDefault();
                 const dropdown = bootstrap.Dropdown.getOrCreateInstance(this);
                 dropdown.toggle();
             }
         });
+        
+        // Prevent dropdown from closing immediately on mobile
+        toggle.addEventListener('touchstart', function(e) {
+            e.stopPropagation();
+        });
     });
     
-    // Auto-hide mobile keyboard when scrolling - but not on login/register pages
+    // Improve dropdown menu positioning on mobile
+    document.addEventListener('shown.bs.dropdown', function(e) {
+        const dropdown = e.target.querySelector('.dropdown-menu');
+        if (dropdown && window.innerWidth < 992) {
+            dropdown.style.position = 'absolute';
+            dropdown.style.right = '0';
+            dropdown.style.left = 'auto';
+            dropdown.style.transform = 'none';
+        }
+    });
+    
+    // Auto-hide mobile keyboard when scrolling - but not on login/register/chat pages
     let ticking = false;
     function updateScroll() {
-        // Don't blur inputs on login/register/profile pages
+        // Don't blur inputs on login/register/profile/chat pages
         if (window.location.pathname.includes('/login') || 
             window.location.pathname.includes('/register') ||
-            window.location.pathname.includes('/profile')) {
+            window.location.pathname.includes('/profile') ||
+            window.location.pathname.includes('/league_chat')) {
             ticking = false;
             return;
         }

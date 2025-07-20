@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block title %}Waiting Room - Farmington{% endblock %}
@@ -205,7 +206,7 @@ function updateCountdown() {
     const minutes = Math.floor(distance / 60000);
     const seconds = Math.floor((distance % 60000) / 1000);
     countdownEl.innerText = 
-        (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : seconds);
 }
 
 const interval = setInterval(updateCountdown, 1000);

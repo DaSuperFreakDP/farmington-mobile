@@ -107,7 +107,7 @@
                                                     <small><strong>PHYS:</strong> {{ farmer.physical }}</small>
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Crop Preferences -->
                                             <div class="text-center">
                                                 <small class="text-muted d-block">🌾 Crop Preferences:</small>
@@ -120,7 +120,7 @@
                                                     <span class="badge bg-light text-dark" style="font-size: 0.6rem;">🌸 {{ farmer.crop_preferences.spring|title if farmer.crop_preferences else 'N/A' }}</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <!-- Previous Season Performance -->
                                             {% if farmer.prev_season_stats %}
                                                 <div class="text-center mt-2">
@@ -143,7 +143,7 @@
                                                     <small class="text-muted" style="font-size: 0.7rem;">📊 No previous data</small>
                                                 </div>
                                             {% endif %}
-                                            
+
                                             {% if username == current_user_turn and not user_draft_complete %}
                                                 <form method="post" action="{{ url_for('submit_pick') }}" class="mt-3">
                                                     <input type="hidden" name="farmer_index" value="{{ loop.index0 }}">
@@ -235,63 +235,62 @@
 
 {% block scripts %}
 <script>
-const timerEl = document.getElementById("global-timer");
-const pickStart = new Date("{{ pick_start_time }}").getTime();
-let hasSkipped = false;
-let isMyTurn = "{{ username }}" === "{{ current_user_turn }}";
+// Pick timer - 2 minutes (120 seconds)
+const PICK_TIME_SECONDS = 120;
+const timerDisplay = document.getElementById('global-timer');
+const pickStartTime = new Date("{{ pick_start_time }}").getTime();
 
-function updateGlobalTimer() {
-    const now = Date.now();
-    const diff = Math.floor((pickStart + 120000 - now) / 1000);
-    const mins = Math.floor(diff / 60);
-    const secs = diff % 60;
+function updatePickTimer() {
+    const now = new Date().getTime();
+    const elapsed = Math.floor((now - pickStartTime) / 1000);
+    const timeRemaining = Math.max(0, PICK_TIME_SECONDS - elapsed);
 
-    if (diff <= 0) {
-        timerEl.innerText = "0:00";
-        // Only skip if it's actually the current user's turn and they haven't been skipped yet
-        if (!hasSkipped && isMyTurn) {
-            hasSkipped = true;
-            console.log("⏳ Time's up! Skipping turn...");
-            fetch("{{ url_for('skip_turn') }}", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ league_code: "{{ league_code }}" })
-            })
-            .then(res => {
-                if (res.ok) {
-                    console.log("✅ Turn skipped successfully");
-                    setTimeout(() => location.reload(), 1000);
-                } else {
-                    console.error("⚠️ Failed to skip turn:", res.status);
-                }
-            })
-            .catch(err => console.error("⚠️ Skip error:", err));
-        }
-    } else {
-        timerEl.innerText = `${mins}:${secs.toString().padStart(2, '0')}`;
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+
+    if (timerDisplay) {
+        timerDisplay.textContent = 
+            (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     }
-}
 
-// Start the timer
-const timerInterval = setInterval(updateGlobalTimer, 1000);
-updateGlobalTimer();
-
-// Auto-refresh every 3 seconds if not current user's turn to catch new picks
-if (!isMyTurn) {
-    setInterval(() => {
-        if (!hasSkipped) {
+    // Auto-skip when timer reaches 0
+    if (timeRemaining <= 0 && "{{ current_user_turn }}" === "{{ username }}") {
+        fetch("{{ url_for('skip_turn') }}", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "league_code": "{{ league_code }}"
+            })
+        }).then(() => {
             location.reload();
-        }
-    }, 3000);
+        });
+    }
+
+    return timeRemaining;
 }
 
-// Handle form submissions to ensure proper page refresh after pick
-document.querySelectorAll('form[action="{{ url_for("submit_pick") }}"]').forEach(form => {
-    form.addEventListener('submit', function(e) {
-        // Clear the timer to prevent any race conditions
+// Update timer every second
+const timerInterval = setInterval(() => {
+    const remaining = updatePickTimer();
+    if (remaining <= 0) {
         clearInterval(timerInterval);
-        hasSkipped = true; // Prevent skip from firing while form is submitting
-    });
-});
+    }
+}, 1000);
+
+// Initial call
+updatePickTimer();
+
+// Auto-refresh draft room every 5 seconds (but not if timer is running out)
+setInterval(() => {
+    const now = new Date().getTime();
+    const elapsed = Math.floor((now - pickStartTime) / 1000);
+    const timeRemaining = Math.max(0, PICK_TIME_SECONDS - elapsed);
+    
+    if (timeRemaining > 5) {
+        location.reload();
+    }
+}, 5000);
 </script>
 {% endblock %}
