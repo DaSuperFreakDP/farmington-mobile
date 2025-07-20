@@ -35,18 +35,18 @@
         "market_initialized": true,
         "playoff_records": {
             "ty": {
-                "wins": 6,
-                "losses": 3,
+                "wins": 4,
+                "losses": 2,
                 "ties": 0
             },
             "jared": {
-                "wins": 9,
+                "wins": 6,
                 "losses": 0,
                 "ties": 0
             },
             "bob": {
-                "wins": 4,
-                "losses": 5,
+                "wins": 3,
+                "losses": 3,
                 "ties": 0
             }
         },
@@ -63,13 +63,7 @@
             "jared_bye_cycle_4",
             "bob_bye_cycle_4",
             "bob_vs_ty_cycle_5",
-            "jared_bye_cycle_5",
-            "bob_vs_ty_cycle_6",
-            "jared_bye_cycle_6",
-            "bob_vs_ty_cycle_7",
-            "jared_bye_cycle_7",
-            "bob_vs_ty_cycle_8",
-            "jared_bye_cycle_8"
+            "jared_bye_cycle_5"
         ],
         "matchup_schedule": {
             "ty": [

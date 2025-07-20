@@ -647,10 +647,10 @@
                                             <table class="table table-hover">
                                                 <thead class="table-dark">
                                                     <tr>
-                                                        <th><i class="fas fa-medal me-2"></i>Rank</th>
-                                                        <th><i class="fas fa-user me-2"></i>Player</th>
-                                                        <th><i class="fas fa-star me-2"></i>Total Points</th>
-                                                        <th><i class="fas fa-eye me-2"></i>Actions</th>
+                                                        <th><i class="fas fa-medal me-1"></i>Rank</th>
+                                                        <th><i class="fas fa-user me-1"></i>Player</th>
+                                                        <th><i class="fas fa-star me-1"></i>Points</th>
+                                                        <th class="mobile-hide"><i class="fas fa-eye me-1"></i>Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -667,35 +667,35 @@
                                                                     <span class="badge bg-light text-dark">{{ loop.index }}</span>
                                                                 {% endif %}
                                                             </td>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    {% if entry.profile_pic %}
-                                                                        <img src="{{ url_for('static', filename='images/profile_pics/' + entry.profile_pic) }}" 
-                                                                             class="rounded-circle me-2" 
-                                                                             alt="Profile" 
-                                                                             style="width: 42px; height: 42px; object-fit: cover;">
-                                                                    {% else %}
-                                                                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center me-2" 
-                                                                             style="width: 42px; height: 42px;">
-                                                                            <i class="fas fa-user text-white" style="font-size: 14px;"></i>
-                                                                        </div>
-                                                                                                   {% endif %}
+                                                             <td>
+                                                                 <div class="d-flex align-items-center">
+                                                                     {% if entry.profile_pic %}
+                                                                         <img src="{{ url_for('static', filename='images/profile_pics/' + entry.profile_pic) }}" 
+                                                                              class="rounded-circle me-2" 
+                                                                              alt="Profile" 
+                                                                              style="width: 32px; height: 32px; object-fit: cover;">
+                                                                     {% else %}
+                                                                         <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center me-2" 
+                                                                              style="width: 32px; height: 32px;">
+                                                                             <i class="fas fa-user text-white" style="font-size: 12px;"></i>
+                                                                         </div>
+                                                                     {% endif %}
                                                                      <div>
                                                                          <strong>{{ entry.team_name }}</strong>
                                                                          <div class="small text-muted">@{{ entry.username }}</div>
+                                                                         {% if entry.is_current_user %}
+                                                                             <span class="badge bg-success">You</span>
+                                                                         {% endif %}
                                                                      </div>
                                                                  </div>
-                                                                 {% if entry.is_current_user %}
-                                                                     <span class="badge bg-success ms-2">You</span>
-                                                                 {% endif %}
                                                              </td>
                                                              <td>
                                                                  <span class="fw-bold text-success">{{ entry.total_points }}</span>
                                                              </td>
-                                                             <td>
+                                                             <td class="mobile-hide">
                                                                  <a href="{{ url_for('view_user_team', username=entry.username) }}" 
                                                                     class="btn btn-sm btn-outline-primary">
-                                                                     <i class="fas fa-eye me-1"></i>View Team
+                                                                     <i class="fas fa-eye"></i>
                                                                  </a>
                                                              </td>
                          </tr>
@@ -1035,6 +1035,8 @@
                                      </div>
                                  </div>
                              </div>
+</div>
+                             </div>
 {% else %}
          <!-- No Matchup Yet -->
          <div class="text-center p-4">
@@ -1080,7 +1082,7 @@
              {% endif %}
          </div>
      {% endif %}
-                                 </div>
+</div>
                              </div>
                          {% endif %}
 
@@ -1345,7 +1347,8 @@
 
                                          <div class="col-md-6">
                                              {% if session.user == current_league.host %}
-                                                 <!-- League Settings (Host Only) -->
+                                                                                                  ```
+                                                                 <!-- League Settings (Host Only) -->
                                                  <div class="card shadow-sm mb-3">
                                                      <div class="card-header bg-warning text-dark">
                                                          <h5 class="card-title mb-0">
@@ -1356,7 +1359,7 @@
                                                          {% if not current_league.get('draft_time') %}
                                                              <form method="post" action="/leagues" class="mb-3">
                                                                  <input type="hidden" name="action" value="update_settings">
-                                                                 
+
                                                                  <div class="mb-3">
                                                                      <label class="form-label">Season:</label>
                                                                      <select name="season" class="form-select">
@@ -1560,6 +1563,17 @@
  .sortable.desc i:before {
      content: "\f0dd";
      color: #dc3545;
+ }
+ /* Hide on smaller screens */
+ .mobile-hide {
+     display: none;
+ }
+
+ /* Show on larger screens */
+ @media (min-width: 768px) {
+     .mobile-hide {
+         display: table-cell;
+     }
  }
 </style>
 
@@ -2097,8 +2111,7 @@ function updatePlantGrowth() {
              <div class="small text-muted mt-1">Seedling</div>
          </div>
      `;
- } else if (currentDay === 2) {
-     // Stage 2: Growing plant
+ } else if (currentDay === 2) {// Stage 2: Growing plant
      plantStage = `
          <div style="position: absolute; bottom: 10px; width: 100%; text-align: center;">
              <div style="font-size: 2.5rem; color: #28a745;">🌿</div>
