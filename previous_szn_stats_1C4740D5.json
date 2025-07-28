@@ -1,0 +1,302 @@
+{
+    "Josh": {
+        "name": "Josh",
+        "original_stats": {
+            "strength": 1,
+            "handy": 7,
+            "stamina": 6,
+            "physical": 6
+        },
+        "games_played": 30,
+        "total_points": 267,
+        "total_injuries": 2,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Zach": {
+        "name": "Zach",
+        "original_stats": {
+            "strength": 5,
+            "handy": 4,
+            "stamina": 8,
+            "physical": 8
+        },
+        "games_played": 30,
+        "total_points": 282,
+        "total_injuries": 5,
+        "best_role": "Speed Runner",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Tyler": {
+        "name": "Tyler",
+        "original_stats": {
+            "strength": 10,
+            "handy": 3,
+            "stamina": 8,
+            "physical": 10
+        },
+        "games_played": 30,
+        "total_points": 467,
+        "total_injuries": 1,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Tyrone": {
+        "name": "Tyrone",
+        "original_stats": {
+            "strength": 4,
+            "handy": 7,
+            "stamina": 7,
+            "physical": 9
+        },
+        "games_played": 30,
+        "total_points": 201,
+        "total_injuries": 2,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Luke": {
+        "name": "Luke",
+        "original_stats": {
+            "strength": 9,
+            "handy": 3,
+            "stamina": 6,
+            "physical": 7
+        },
+        "games_played": 30,
+        "total_points": 395,
+        "total_injuries": 1,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Vrock": {
+        "name": "Vrock",
+        "original_stats": {
+            "strength": 6,
+            "handy": 5,
+            "stamina": 5,
+            "physical": 6
+        },
+        "games_played": 30,
+        "total_points": 299,
+        "total_injuries": 5,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Jared": {
+        "name": "Jared",
+        "original_stats": {
+            "strength": 5,
+            "handy": 8,
+            "stamina": 9,
+            "physical": 8
+        },
+        "games_played": 30,
+        "total_points": 473,
+        "total_injuries": 0,
+        "best_role": "Speed Runner",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Mezzy": {
+        "name": "Mezzy",
+        "original_stats": {
+            "strength": 8,
+            "handy": 9,
+            "stamina": 8,
+            "physical": 8
+        },
+        "games_played": 30,
+        "total_points": 275,
+        "total_injuries": 3,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Morris": {
+        "name": "Morris",
+        "original_stats": {
+            "strength": 7,
+            "handy": 3,
+            "stamina": 4,
+            "physical": 5
+        },
+        "games_played": 30,
+        "total_points": 203,
+        "total_injuries": 5,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Hunter": {
+        "name": "Hunter",
+        "original_stats": {
+            "strength": 6,
+            "handy": 8,
+            "stamina": 6,
+            "physical": 6
+        },
+        "games_played": 30,
+        "total_points": 301,
+        "total_injuries": 4,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Nelson": {
+        "name": "Nelson",
+        "original_stats": {
+            "strength": 4,
+            "handy": 8,
+            "stamina": 4,
+            "physical": 7
+        },
+        "games_played": 30,
+        "total_points": 219,
+        "total_injuries": 4,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Dante": {
+        "name": "Dante",
+        "original_stats": {
+            "strength": 7,
+            "handy": 4,
+            "stamina": 5,
+            "physical": 7
+        },
+        "games_played": 30,
+        "total_points": 244,
+        "total_injuries": 1,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Christian": {
+        "name": "Christian",
+        "original_stats": {
+            "strength": 6,
+            "handy": 4,
+            "stamina": 5,
+            "physical": 9
+        },
+        "games_played": 30,
+        "total_points": 294,
+        "total_injuries": 2,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Marc-Anthony": {
+        "name": "Marc-Anthony",
+        "original_stats": {
+            "strength": 5,
+            "handy": 6,
+            "stamina": 4,
+            "physical": 6
+        },
+        "games_played": 30,
+        "total_points": 325,
+        "total_injuries": 2,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Daniel": {
+        "name": "Daniel",
+        "original_stats": {
+            "strength": 5,
+            "handy": 4,
+            "stamina": 7,
+            "physical": 7
+        },
+        "games_played": 30,
+        "total_points": 244,
+        "total_injuries": 3,
+        "best_role": "Speed Runner",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Nick Rebello": {
+        "name": "Nick Rebello",
+        "original_stats": {
+            "strength": 9,
+            "handy": 1,
+            "stamina": 4,
+            "physical": 7
+        },
+        "games_played": 30,
+        "total_points": 281,
+        "total_injuries": 3,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Kieran Richards": {
+        "name": "Kieran Richards",
+        "original_stats": {
+            "strength": 3,
+            "handy": 7,
+            "stamina": 6,
+            "physical": 3
+        },
+        "games_played": 30,
+        "total_points": 359,
+        "total_injuries": 8,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Gus Mulewhistle": {
+        "name": "Gus Mulewhistle",
+        "original_stats": {
+            "strength": 3,
+            "handy": 8,
+            "stamina": 6,
+            "physical": 6
+        },
+        "games_played": 30,
+        "total_points": 258,
+        "total_injuries": 5,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Dusty Plowman": {
+        "name": "Dusty Plowman",
+        "original_stats": {
+            "strength": 4,
+            "handy": 8,
+            "stamina": 6,
+            "physical": 9
+        },
+        "games_played": 30,
+        "total_points": 415,
+        "total_injuries": 3,
+        "best_role": "Fix Meiser",
+        "was_drafted": false,
+        "simulated_games": 30
+    },
+    "Bo Plowman": {
+        "name": "Bo Plowman",
+        "original_stats": {
+            "strength": 8,
+            "handy": 3,
+            "stamina": 3,
+            "physical": 10
+        },
+        "games_played": 30,
+        "total_points": 353,
+        "total_injuries": 1,
+        "best_role": "Lift Tender",
+        "was_drafted": false,
+        "simulated_games": 30
+    }
+}

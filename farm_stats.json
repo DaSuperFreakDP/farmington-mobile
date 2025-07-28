@@ -1,0 +1,498 @@
+{
+    "users": {
+        "ty": {
+            "matchday": 11,
+            "drafted_team": {
+                "Fix Meiser": {
+                    "id": 1,
+                    "name": "Josh",
+                    "strength": 1,
+                    "handy": 5,
+                    "stamina": 6,
+                    "physical": 6,
+                    "image": "/static/images/farmers/josh.png"
+                },
+                "Speed Runner": {
+                    "id": 2,
+                    "name": "Zach",
+                    "strength": 5,
+                    "handy": 4,
+                    "stamina": 10,
+                    "physical": 8,
+                    "image": "/static/images/farmers/zach.png"
+                },
+                "Lift Tender": {
+                    "id": 3,
+                    "name": "Tyler",
+                    "strength": 10,
+                    "handy": 3,
+                    "stamina": 8,
+                    "physical": 10,
+                    "image": "/static/images/farmers/tyler.jpg"
+                },
+                "Bench 1": {
+                    "id": 4,
+                    "name": "Tyrone",
+                    "strength": 4,
+                    "handy": 5,
+                    "stamina": 8,
+                    "physical": 9,
+                    "image": "/static/images/farmers/tyrone.png"
+                },
+                "Bench 2": {
+                    "id": 5,
+                    "name": "Luke",
+                    "strength": 10,
+                    "handy": 3,
+                    "stamina": 6,
+                    "physical": 7,
+                    "image": "/static/images/farmers/luke.png"
+                }
+            },
+            "data": [
+                {
+                    "matchday": 2,
+                    "season": "summer",
+                    "daily_crop": "cucumbers",
+                    "catastrophe_loss": 0,
+                    "affected_farmer": null,
+                    "story_message": "First,\nJosh tried their best to Build Tha Fence but the only thing he nailed was his own finger. Now a sheep is nailing his wife. Zach and Tyler were both very disappointed in Josh.\nThen,\nZach tried their best to Harvest tha Crops and now the field looks like a diggity-darn masterpiece. A feast of fresh cornbread and raccoon BBQ was served!\nFinally,\nTyler tried their best to Shovel Tha Manure but he failed. That's wasn't cowshit... that was BULLSHIT! Josh and Zach were both very disappointed in Tyler.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 19,
+                            "crop_points": 19,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 55,
+                            "crop_points": 49,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 9,
+                            "crop_points": 9,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 3,
+                    "season": "summer",
+                    "daily_crop": "tomatoes",
+                    "catastrophe_loss": 1,
+                    "affected_farmer": "Tyler",
+                    "story_message": "First,\nJosh tried their best to Repair Tha Barn and accidentally created the eighth wonder of the world. A feast of fresh cornbread and raccoon BBQ was served!\nThen,\nZach tried their best to Milk Tha Cow but the cow looked at him and said, 'Nice try, fuckface'. Josh and Tyler were both very disappointed in Zach.\nFinally,\nTyler tried their best to Shovel Tha Manure but his efforts belong in the same pile. Josh and Zach were both very disappointed in Tyler.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 56,
+                            "crop_points": 54,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 12,
+                            "crop_points": 12,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 2,
+                            "crop_points": 2,
+                            "catastrophe_loss": 1,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 4,
+                    "season": "summer",
+                    "daily_crop": "tomatoes",
+                    "catastrophe_loss": 1,
+                    "affected_farmer": "Tyler",
+                    "story_message": "First,\nJosh tried their best to Repair Tha Barn but accidentally created a whole new opening for the cows to fucking escape. Zach and Tyler were both very disappointed in Josh.\nThen,\nZach tried their best to Chase Tha Coyote and chased him all the way home where the coyote invited him inside, but he missed the signals. The scarecrow even did a happy dance!\nFinally,\nTyler tried their best to Push Tha Car but the car stayed put. Sounds like someone forgot to put it in neutral. Josh and Zach were both very disappointed in Tyler.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 13,
+                            "crop_points": 13,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 42,
+                            "crop_points": 40,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 2,
+                            "crop_points": 2,
+                            "catastrophe_loss": 1,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 5,
+                    "season": "summer",
+                    "daily_crop": "watermelons",
+                    "catastrophe_loss": 0,
+                    "affected_farmer": null,
+                    "story_message": "First,\nJosh tried their best to Fix Tha Tractor but somehow made it worse, now it's a lawn ornament. Zach and Tyler were both very disappointed in Josh.\nThen,\nZach tried their best to Chase Tha Coyote and chased him all the way home where the coyote invited him inside, but he missed the signals. The local farmer's market gave them a medal!\nFinally,\nTyler tried their best to Push Tha Car but it did not move an inch. Josh and Zach were both very disappointed in Tyler.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 6,
+                    "season": "summer",
+                    "daily_crop": "zucchini",
+                    "catastrophe_loss": 1,
+                    "affected_farmer": "Zach",
+                    "story_message": "First,\nJosh tried their best to Build Tha Fence but instead created a barricade of disappointment and splinters. Zach and Tyler were both very disappointed in Josh.\nThen,\nZach tried their best to Harvest tha Crops and now the field looks like a diggity-darn masterpiece. Fireworks lit up the night sky in the shape of a sexy chicken!\nFinally,\nTyler tried their best to Lift Tha Hay and he actually did it...I didn't think he had it in him. Everyone cheered and started to square-dance!\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 19,
+                            "crop_points": 19,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 17,
+                            "crop_points": 12,
+                            "catastrophe_loss": 1,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 49,
+                            "crop_points": 43,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 7,
+                    "season": "summer",
+                    "daily_crop": "cucumbers",
+                    "catastrophe_loss": 0,
+                    "affected_farmer": null,
+                    "story_message": "First,\nJosh tried their best to Build Tha Fence but instead created a barricade of disappointment and splinters. Zach and Tyler were both very disappointed in Josh.\nDue to after a silo fell and crushed his legs, Josh became injured and will miss 0 matchday(s).\nThen,\nZach tried their best to Chase Tha Coyote and chased him all the way home where the coyote invited him inside, but he missed the signals. The local farmer's market gave them a medal!\nFinally,\nTyler tried their best to Shovel Tha Manure but his efforts belong in the same pile. Josh and Zach were both very disappointed in Tyler.\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 2,
+                            "crop_points": 2,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 1,
+                            "injuries_this_season": 1,
+                            "injury_points_lost": 1,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 32,
+                            "crop_points": 30,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 18,
+                            "crop_points": 18,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 8,
+                    "season": "summer",
+                    "daily_crop": "peppers",
+                    "catastrophe_loss": 0,
+                    "affected_farmer": null,
+                    "story_message": "First,\nJosh tried their best to Build Tha Fence but the only thing he nailed was his own finger. Now a sheep is nailing his wife. Zach and Tyler were both very disappointed in Josh.\nDue to after a silo fell and crushed his legs, Josh became injured and will miss 0 matchday(s).\nThen,\nZach tried their best to Milk Tha Cow and received gallons of milk. No more self-sucking! The scarecrow even did a happy dance!\nFinally,\nTyler tried their best to Push Tha Car and now it calls him 'daddy'. The local farmer's market gave them a medal!\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 2,
+                            "injuries_this_season": 1,
+                            "injury_points_lost": 2,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 9,
+                    "season": "summer",
+                    "daily_crop": "watermelons",
+                    "catastrophe_loss": 0,
+                    "affected_farmer": null,
+                    "story_message": "First,\nJosh tried their best to Repair Tha Barn and made the place look like a palace. Now the Amish are sending him contracts. The chickens laid eggs in celebration!\nThen,\nZach tried their best to Mow Tha Lawn but it got caught on some stones. Josh and Tyler were both very disappointed in Zach.\nFinally,\nTyler tried their best to Lift Tha Hay and he actually did it...I didn't think he had it in him. The chickens laid eggs in celebration!\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 0,
+                            "crop_points": 0,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 10,
+                    "season": "summer",
+                    "daily_crop": "cucumbers",
+                    "catastrophe_loss": 1,
+                    "affected_farmer": "Tyler",
+                    "story_message": "First,\nJosh tried their best to Repair Tha Barn but accidentally created a whole new opening for the cows to fucking escape. Zach and Tyler were both very disappointed in Josh.\nThen,\nZach tried their best to Chase Tha Coyote and chased him all the way home where the coyote invited him inside, but he missed the signals. The farmers celebrated with some of Aunt Myrna's Party cheese salad!\nFinally,\nTyler tried their best to Push Tha Car and now it calls him 'daddy'. Everyone cheered and started to square-dance!\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 20,
+                            "crop_points": 20,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 44,
+                            "crop_points": 41,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 20,
+                            "crop_points": 14,
+                            "catastrophe_loss": 1,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        }
+                    ]
+                },
+                {
+                    "matchday": 11,
+                    "season": "summer",
+                    "daily_crop": "corn",
+                    "catastrophe_loss": 1,
+                    "affected_farmer": "Zach",
+                    "story_message": "First,\nJosh tried their best to Repair Tha Barn and made the place look like a palace. Now the Amish are sending him contracts. The local farmer's market gave them a medal!\nThen,\nZach tried their best to Harvest tha Crops and now the field looks like a diggity-darn masterpiece. The cows mooed in approval!\nFinally,\nTyler tried their best to Shovel Tha Manure but his efforts belong in the same pile. Josh and Zach were both very disappointed in Tyler.\nDue to after falling off a tractor trying to jack off, Tyler became injured and will miss 0 matchday(s).\n\nYeeeeeeHawww! That's all the news for this matchday. Stay tuned for more Farmington News! YEEEEEHAWWWW!",
+                    "farmers": [
+                        {
+                            "name": "Josh",
+                            "job": "Fix Meiser",
+                            "points_after_catastrophe": 38,
+                            "crop_points": 36,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Zach",
+                            "job": "Speed Runner",
+                            "points_after_catastrophe": 28,
+                            "crop_points": 24,
+                            "catastrophe_loss": 1,
+                            "daily_injury_loss": 0,
+                            "injuries_this_season": 0,
+                            "injury_points_lost": 0,
+                            "miss_days": 0
+                        },
+                        {
+                            "name": "Tyler",
+                            "job": "Lift Tender",
+                            "points_after_catastrophe": 6,
+                            "crop_points": 6,
+                            "catastrophe_loss": 0,
+                            "daily_injury_loss": 2,
+                            "injuries_this_season": 1,
+                            "injury_points_lost": 2,
+                            "miss_days": 0
+                        }
+                    ]
+                }
+            ],
+            "total_injuries": 3,
+            "total_injury_points_lost": 5
+        },
+        "jared": {
+            "matchday": 0,
+            "drafted_team": {},
+            "data": []
+        },
+        "bob": {
+            "matchday": 0,
+            "drafted_team": {},
+            "data": []
+        }
+    }
+}
