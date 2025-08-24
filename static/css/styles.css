@@ -1,0 +1,1883 @@
+/* CSS Custom Properties for Theme Management */
+:root {
+  /* Light Theme Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  --border-color: #dee2e6;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+
+  /* Brand Colors */
+  --farmington-green: #28a745;
+  --farmington-brown: #8b4513;
+  --farmington-gold: #ffc107;
+  --farmington-orange: #fd7e14;
+
+  /* Status Colors */
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+
+  /* Animation Settings */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #404040;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --border-color: #555555;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Card Enhancements */
+.card {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  transition: all var(--transition-normal);
+  border-radius: 0.75rem;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background-color: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+  font-weight: 600;
+}
+
+/* Farmer Card Styles */
+.farmer-card {
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.farmer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.75rem 1.5rem var(--shadow-lg);
+}
+
+.farmer-card.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  filter: grayscale(0.5);
+}
+
+.farmer-market-card {
+  border-left: 4px solid var(--farmington-green);
+}
+
+.farmer-preview-card {
+  border: 2px solid var(--border-color);
+  transition: border-color var(--transition-fast);
+}
+
+.farmer-preview-card:hover {
+  border-color: var(--farmington-orange);
+}
+
+.farmer-display-card {
+  transition: all var(--transition-normal);
+}
+
+.farmer-display-card:hover {
+  box-shadow: 0 0.5rem 1rem var(--shadow-lg);
+}
+
+/* Stat Display Components */
+.stat-display {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+  margin-bottom: 0.5rem;
+  transition: background-color var(--transition-fast);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+.stat-summary {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+  transition: all var(--transition-fast);
+}
+
+.stat-summary:hover {
+  background-color: var(--bg-tertiary);
+  transform: scale(1.05);
+}
+
+/* Navigation Enhancements */
+.navbar {
+  box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.nav-tabs .nav-link {
+  color: var(--text-secondary);
+  border-color: transparent;
+  transition: all var(--transition-fast);
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: var(--border-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--bg-primary);
+  border-color: var(--farmington-orange);
+  color: var(--farmington-orange);
+  font-weight: 600;
+}
+
+/* Button Enhancements */
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  text-transform: none;
+  letter-spacing: 0.25px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.5rem var(--shadow);
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Form Enhancements */
+.form-control,
+.form-select {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  transition: all var(--transition-fast);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--bg-primary);
+  border-color: var(--farmington-orange);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.25);
+  outline: none;
+}
+
+/* Mobile-specific form improvements */
+@media (max-width: 768px) {
+  .form-control,
+  .form-select {
+    -webkit-user-select: text;
+    user-select: text;
+    -webkit-touch-callout: default;
+    cursor: text;
+  }
+
+  /* Ensure league form inputs and chat input are properly styled */
+  input[name="league_name"],
+  input[name="league_code"],
+  #message-input {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    cursor: text !important;
+    pointer-events: auto !important;
+  }
+}
+
+.form-label {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Draft Select Validation */
+.draft-select option:disabled {
+  color: var(--text-muted);
+  background-color: var(--bg-tertiary);
+}
+
+/* Table Enhancements */
+.table {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.table th {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  border-color: var(--border-color);
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Force farmer stats table headers to have black text */
+#farmer-stats-table thead th {
+  color: #000000 !important;
+}
+
+#farmer-stats-table thead th .fas {
+  color: #666666 !important;
+}
+
+/* Alert Enhancements */
+.alert {
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem var(--shadow);
+}
+
+/* Badge Enhancements */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  border-radius: 0.5rem;
+}
+
+/* Progress Bar Enhancements */
+.progress {
+  background-color: var(--bg-tertiary);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  transition: width var(--transition-normal);
+}
+
+/* Countdown Display */
+.countdown-display {
+  padding: 2rem;
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--danger);
+  text-shadow: 0 2px 4px var(--shadow);
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* Chicken Coop Timer Styles */
+.impressive-timer {
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 3px solid #654321;
+}
+
+.timer-description {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+}
+
+.timer-display {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0 auto;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.timer-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #654321;
+  font-family: 'Courier New', monospace;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.timer-label {
+  font-size: 0.8rem;
+  color: #654321;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+.chicken-coop {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  position: relative;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border-radius: 15px;
+  border: 2px solid #654321;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.chicken {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.chicken.sleeping {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.chicken.awake {
+  opacity: 1;
+  transform: scale(1.1);
+  animation: chicken-excited 0.5s ease-in-out infinite alternate;
+}
+
+.chicken.celebrating {
+  animation: chicken-party 0.3s ease-in-out infinite;
+}
+
+@keyframes chicken-excited {
+  0% { transform: scale(1.1) rotate(-2deg); }
+  100% { transform: scale(1.15) rotate(2deg); }
+}
+
+@keyframes chicken-party {
+  0% { transform: scale(1.2) rotate(-5deg) translateY(0px); }
+  25% { transform: scale(1.3) rotate(5deg) translateY(-5px); }
+  50% { transform: scale(1.25) rotate(-3deg) translateY(-8px); }
+  75% { transform: scale(1.35) rotate(3deg) translateY(-3px); }
+  100% { transform: scale(1.2) rotate(-5deg) translateY(0px); }
+}
+
+.chicken-body {
+  width: 30px;
+  height: 25px;
+  background: #FFE4B5;
+  border-radius: 50% 50% 40% 40%;
+  position: relative;
+  border: 2px solid #DEB887;
+}
+
+.chicken-head {
+  width: 18px;
+  height: 18px;
+  background: #FFE4B5;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  left: 6px;
+  border: 2px solid #DEB887;
+}
+
+.chicken-beak {
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid #FF8C00;
+  position: absolute;
+  top: 6px;
+  left: -3px;
+}
+
+.chicken-comb {
+  width: 8px;
+  height: 6px;
+  background: #FF0000;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: -3px;
+  left: 5px;
+}
+
+.chicken-wing {
+  width: 12px;
+  height: 8px;
+  background: #DEB887;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  border: 1px solid #CD853F;
+}
+
+.chicken-tail {
+  width: 6px;
+  height: 12px;
+  background: #DEB887;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 2px;
+  right: -4px;
+  border: 1px solid #CD853F;
+}
+
+.chicken-comb {
+  width: 8px;
+  height: 6px;
+  background: #FF6347;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: -4px;
+  left: 5px;
+}
+
+.chicken-wing {
+  width: 15px;
+  height: 12px;
+  background: #F5DEB3;
+  border-radius: 60% 40%;
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  border: 1px solid #DEB887;
+}
+
+.chicken-tail {
+  width: 12px;
+  height: 15px;
+  background: #F5DEB3;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: -2px;
+  right: -8px;
+  border: 1px solid #DEB887;
+}
+
+/* Sleeping chickens */
+.chicken.sleeping {
+  animation: sleep-bob 2s ease-in-out infinite;
+}
+
+.chicken.sleeping .chicken-head {
+  transform: rotate(25deg);
+}
+
+.chicken.sleeping::after {
+  content: '💤';
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  font-size: 12px;
+  animation: sleep-bubble 3s ease-in-out infinite;
+}
+
+@keyframes sleep-bob {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(2px); }
+}
+
+@keyframes sleep-bubble {
+  0%, 100% { opacity: 0.3; transform: translateY(0px) scale(0.8); }
+  50% { opacity: 1; transform: translateY(-5px) scale(1); }
+}
+
+/* Dancing chickens - Las Vegas showgirl style */
+.chicken.dancing {
+  animation: vegas-dance 0.8s ease-in-out infinite;
+  transform-origin: bottom center;
+  z-index: 10;
+}
+
+.chicken.celebrating.dancing {
+  animation: vegas-dance 0.8s ease-in-out infinite, chicken-party 0.3s ease-in-out infinite;
+}
+
+.chicken.dancing .chicken-wing {
+  animation: wing-flap 0.4s ease-in-out infinite;
+}
+
+.chicken.dancing .chicken-tail {
+  animation: tail-shake 0.6s ease-in-out infinite;
+}
+
+.chicken.dancing::before {
+  content: '✨';
+  position: absolute;
+  top: -15px;
+  left: -5px;
+  font-size: 16px;
+  animation: sparkle 1s ease-in-out infinite;
+  z-index: 11;
+}
+
+.chicken.dancing::after {
+  content: '🎭';
+  position: absolute;
+  top: -25px;
+  right: -5px;
+  font-size: 12px;
+  animation: mask-spin 2s linear infinite;
+  z-index: 11;
+}
+
+@keyframes vegas-dance {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-8px) rotate(-5deg); 
+  }
+  50% { 
+    transform: translateY(-12px) rotate(0deg); 
+  }
+  75% { 
+    transform: translateY(-8px) rotate(5deg); 
+  }
+}
+
+@keyframes wing-flap {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(15deg) scale(1.2); }
+}
+
+@keyframes tail-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes mask-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Timer display in center */
+.timer-display {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.9);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #654321;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.timer-text {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #8B4513;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Party mode when timer ends */
+.chicken-coop.party-time {
+  background: linear-gradient(45deg, #FF1493, #FFD700, #FF69B4, #00CED1, #FF1493);
+  background-size: 400% 400%;
+  animation: party-gradient 2s ease infinite, coop-party 0.5s ease-in-out infinite;
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+@keyframes coop-party {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(1deg); }
+}
+
+@keyframes party-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.impressive-timer.celebration {
+  background: linear-gradient(45deg, #FF1493, #FFD700, #FF69B4, #00CED1, #FF1493);
+  background-size: 400% 400%;
+  animation: party-gradient 2s ease infinite;
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+}
+
+.timer-display.celebration {
+  background: linear-gradient(45deg, #FFD700, #FF69B4, #00CED1, #FFD700);
+  background-size: 200% 200%;
+  animation: party-gradient 1.5s ease infinite;
+  border: 2px solid #FF1493;
+}
+
+.timer-text.celebration {
+  color: #FF1493;
+  animation: text-celebration 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes text-celebration {
+  0% { transform: scale(1) rotate(-1deg); }
+  100% { transform: scale(1.1) rotate(1deg); }
+}
+
+/* Hay scattered around */
+.chicken-coop::before {
+  content: '🌾';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.chicken-coop::after {
+  content: '🌾';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+/* Trading Card Styles */
+.farmer-trade-card {
+  transition: all var(--transition-fast);
+  border-radius: 0.5rem;
+}
+
+.farmer-trade-card:hover {
+  transform: scale(1.02);
+}
+
+/* Story Content Styling */
+.story-content {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  font-family: 'Courier New', monospace;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.stats-content {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.stats-content table {
+  min-width: 600px;
+  white-space: nowrap;
+}
+
+/* Individual matchday table containers */
+.stats-content .table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+}
+
+.stats-content .table-responsive::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.stats-content .table-responsive::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.stats-content .table-responsive::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.stats-content .table-responsive::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Main stats content scrollbar */
+.stats-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.stats-content::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.stats-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.stats-content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Recent Form Display */
+.recent-form .badge {
+  font-size: 0.75rem;
+  padding: 0.25em 0.5em;
+}
+
+/* Role Suitability Indicators */
+.role-suitability {
+  padding: 0.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 0.375rem;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn var(--transition-slow) ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+  animation: slideIn var(--transition-normal) ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Theme Toggle Animation */
+.theme-transition {
+  transition: all var(--transition-slow);
+}
+
+/* Dark Theme Specific Adjustments */
+[data-theme="dark"] .table-dark {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .text-dark {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .border {
+  border-color: var(--border-color) !important;
+}
+
+/* Mobile-First Responsive Design */
+/* Base mobile styles - mobile first approach */
+.container-fluid {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Universal mobile horizontal matchup override */
+@media (max-width: 768px) {
+  .matchup-horizontal * {
+    box-sizing: border-box;
+  }
+
+  .matchup-horizontal .container,
+  .matchup-horizontal .container-fluid {
+    padding: 0 !important;
+  }
+
+  /* Override Bootstrap's responsive behavior completely */
+  .matchup-horizontal [class*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    float: left !important;
+    display: inline-block !important;
+  }
+
+  .matchup-horizontal .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* Touch-friendly button sizing */
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  min-height: 48px;
+  padding: 0.875rem 1.25rem;
+  font-size: 1.1rem;
+}
+
+/* Mobile-optimized cards */
+.card {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card-body {
+  padding: 0.75rem;
+}
+
+.card-header {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Mobile farmer cards */
+.farmer-card {
+  margin-bottom: 0.75rem;
+}
+
+.farmer-card .card-body {
+  padding: 0.5rem;
+}
+
+.farmer-card .card-title {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.farmer-card .card-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Mobile navigation improvements */
+.navbar-nav .nav-link {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Mobile form improvements */
+.form-control,
+.form-select {
+  min-height: 44px;
+  font-size: 16px; /* Prevents zoom on iOS */
+  padding: 0.75rem;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0.375rem;
+}
+
+/* Prevent zoom on iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  textarea {
+    font-size: 16px !important;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+}
+
+.form-label {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Mobile table improvements */
+.table {
+  font-size: 0.875rem;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 0.25rem;
+  vertical-align: middle;
+}
+
+/* Mobile stats display */
+.stat-display {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+}
+
+/* Mobile timer adjustments */
+.impressive-timer {
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.timer-description {
+  font-size: 1rem;
+}
+
+.timer-text {
+  font-size: 2rem;
+}
+
+.chicken-coop {
+  width: 250px;
+  height: 150px;
+}
+
+.chicken {
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+}
+
+/* Mobile almanac improvements */
+.almanac-container {
+  padding: 1rem 0;
+}
+
+.almanac-content {
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.almanac-title {
+  font-size: 1.8rem;
+}
+
+.almanac-subtitle {
+  font-size: 1rem;
+}
+
+/* Mobile trading improvements */
+.farmer-trade-card {
+  margin-bottom: 0.75rem;
+}
+
+/* Mobile leaderboard */
+.table-responsive {
+  font-size: 0.875rem;
+}
+
+/* Tablet styles */
+@media (min-width: 576px) {
+  .container-fluid {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .farmer-card .card-body {
+    padding: 0.75rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .timer-text {
+    font-size: 2.2rem;
+  }
+
+  .chicken-coop {
+    width: 280px;
+    height: 170px;
+  }
+
+  .almanac-content {
+    padding: 2rem;
+  }
+}
+
+/* Small desktop styles */
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .farmer-card .card-body {
+    padding: 1rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .display-6 {
+    font-size: 1.5rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .timer-text {
+    font-size: 2.5rem;
+  }
+
+  .chicken-coop {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .chicken {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .almanac-content {
+    padding: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .almanac-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 992px) {
+  .almanac-title {
+    font-size: 2.5rem;
+  }
+
+  .timer-text {
+    font-size: 3rem;
+  }
+}
+
+/* Profile dropdown styling */
+#profileDropdown {
+  transition: all var(--transition-fast);
+}
+
+#profileDropdown:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#profileDropdown:focus {
+  outline: none;
+}
+
+/* Ensure profile dropdown menu is properly positioned */
+#profileDropdown + .dropdown-menu {
+  min-width: 180px;
+}
+
+/* Mobile-specific utility classes */
+.mobile-hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-hidden {
+    display: block;
+  }
+}
+
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .card:hover {
+    transform: none;
+    box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  }
+
+  .farmer-card:hover {
+    transform: none;
+    box-shadow: 0 0.125rem 0.25rem var(--shadow);
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+
+  /* Make dropdowns more touch-friendly */
+  .dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .dropdown-item:hover {
+    background-color: var(--bg-secondary);
+  }
+
+  /* Ensure all interactive elements are touchable */
+  .btn, .badge, .card-link, [data-bs-toggle] {
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  /* Special handling for dropdown toggles */
+  .dropdown-toggle {
+    touch-action: manipulation;
+    cursor: pointer;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    position: relative;
+    z-index: 1050;
+  }
+
+  /* Ensure dropdown menu is properly positioned */
+  .dropdown-menu {
+    z-index: 1060;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+    min-width: 180px;
+  }
+
+  /* Prevent dropdown from being cut off */
+  .navbar .dropdown {
+    position: static;
+  }
+
+  @media (min-width: 992px) {
+    .navbar .dropdown {
+      position: relative;
+    }
+  }
+
+  /* Prevent text selection on buttons and badges but allow dropdown items to be selectable */
+  .btn *, .badge *, [data-bs-toggle]:not(.dropdown-toggle) * {
+    pointer-events: none;
+  }
+
+  /* Make sure badge buttons are large enough for touch */
+  .badge {
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Mobile landscape optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  .navbar {
+    padding: 0.25rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .impressive-timer {
+    padding: 0.75rem;
+  }
+
+  .timer-text {
+    font-size: 1.5rem;
+  }
+
+  .chicken-coop {
+    width: 200px;
+    height: 120px;
+  }
+}
+
+/* Fix for iOS Safari viewport issues */
+@supports (-webkit-touch-callout: none) {
+  .min-vh-100 {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Improve tap targets */
+.nav-tabs .nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile scrollbar improvements */
+.farmer-breakdown {
+  max-height: 100px;
+}
+
+@media (min-width: 768px) {
+  .farmer-breakdown {
+    max-height: 120px;
+  }
+}
+
+/* Mobile plant container */
+@media (max-width: 576px) {
+  .plant-container {
+    height: 100px !important;
+    width: 120px !important;
+    margin: 5px auto;
+  }
+
+  .plant-stage {
+    font-size: 0.7em;
+  }
+}
+
+/* Force horizontal matchup layout for mobile with better text spacing */
+@media (max-width: 768px) {
+  .matchup-horizontal .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    gap: 0.25rem !important;
+  }
+
+  .matchup-horizontal .row.align-items-center {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Player columns - better proportions matching image */
+  .matchup-horizontal .col-lg-4 {
+    flex: 1 !important;
+    max-width: 30% !important;
+    min-width: 30% !important;
+    padding: 0.5rem 0.25rem !important;
+    display: block !important;
+  }
+
+  /* Center column for plant - larger */
+  .matchup-horizontal .col-lg-4:nth-child(2) {
+    flex: 1.4 !important;
+    max-width: 40% !important;
+    min-width: 40% !important;
+    padding: 0.5rem 0.25rem !important;
+  }
+
+  /* Plant container - much taller and wider like in image */
+  .matchup-horizontal .plant-container {
+    height: 320px !important;
+    width: 95% !important;
+    margin: 10px auto !important;
+    min-height: 320px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+
+  .matchup-horizontal .plant-stage {
+    font-size: 1em !important;
+    white-space: nowrap !important;
+    position: absolute !important;
+    bottom: 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Timer improvements */
+  .matchup-horizontal .timer-text {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+    font-weight: bold !important;
+  }
+
+  .matchup-horizontal .timer-display {
+    padding: 0.5rem !important;
+    margin: 10px auto !important;
+    border-radius: 15px !important;
+  }
+
+  /* Progress bar - thicker and more prominent */
+  .matchup-horizontal .progress {
+    height: 12px !important;
+    margin: 10px 0 !important;
+    border-radius: 6px !important;
+  }
+
+  /* Fix vertical text stacking by ensuring horizontal layout for stats */
+  .matchup-horizontal .row.text-center {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-bottom: 0.75rem !important;
+    gap: 1rem !important;
+    justify-content: space-between !important;
+  }
+
+  .matchup-horizontal .row.text-center .col-6,
+  .matchup-horizontal .row.text-center .col-4 {
+    flex: 1 !important;
+    padding: 0.5rem 0.75rem !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 0.5rem !important;
+  }
+
+  /* Stat values - better sizing and spacing */
+  .matchup-horizontal .stat-value {
+    font-size: 1.4rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.25rem !important;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+  }
+
+  .matchup-horizontal .stat-label {
+    font-size: 0.65rem !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Badge improvements - better spacing */
+  .matchup-horizontal .badge {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.4rem !important;
+    margin: 0.1rem !important;
+    white-space: nowrap !important;
+    line-height: 1.1 !important;
+    border-radius: 8px !important;
+  }
+
+  /* Farmer breakdown - more compact but readable */
+  .matchup-horizontal .farmer-breakdown {
+    max-height: 90px !important;
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+    overflow-y: auto !important;
+    padding: 0.4rem !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  .matchup-horizontal .small {
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Heading improvements - better proportions */
+  .matchup-horizontal h5 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+  }
+
+  .matchup-horizontal h6 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+    font-weight: 500 !important;
+  }
+
+  /* Card body - tighter spacing */
+  .matchup-horizontal .card-body {
+    padding: 0.75rem 0.5rem !important;
+  }
+
+  /* Center column layout fixes */
+  .matchup-horizontal .d-flex.align-items-center.justify-content-center {
+    flex-direction: column !important;
+    align-items: center !important;
+    min-height: auto !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  .matchup-horizontal .me-2 {
+    margin-right: 0 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .matchup-horizontal .ms-2 {
+    margin-left: 0 !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* Override Bootstrap column classes */
+  .matchup-horizontal .col-lg-4,
+  .matchup-horizontal .col-md-4,
+  .matchup-horizontal .col-sm-12,
+  .matchup-horizontal .col-12 {
+    flex: 1 !important;
+    max-width: 30% !important;
+    min-width: 30% !important;
+  }
+
+  /* Special handling for center column */
+  .matchup-horizontal .col-lg-4:nth-child(2),
+  .matchup-horizontal .col-md-4:nth-child(2),
+  .matchup-horizontal .col-sm-12:nth-child(2),
+  .matchup-horizontal .col-12:nth-child(2) {
+    flex: 1.4 !important;
+    max-width: 40% !important;
+    min-width: 40% !important;
+  }
+
+  /* Win probability styling */
+  .matchup-horizontal .win-probability {
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Profile images - better sizing */
+  .matchup-horizontal .rounded-circle {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover !important;
+  }
+
+  /* Team names and badges */
+  .matchup-horizontal .fw-bold {
+    font-size: 0.9rem !important;
+    margin: 0.25rem 0 !important;
+  }
+}
+
+/* Extra compact layout for very small screens with better spacing */
+@media (max-width: 576px) {
+  .matchup-horizontal .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Better proportions for very small screens */
+  .matchup-horizontal .col-lg-4,
+  .matchup-horizontal [class*="col-"] {
+    flex: 0 0 34% !important;
+    max-width: 34% !important;
+    min-width: 34% !important;
+    padding: 0.5rem 0.25rem !important;
+    float: none !important;
+    display: block !important;
+  }
+
+  .matchup-horizontal .col-lg-4:nth-child(2),
+  .matchup-horizontal [class*="col-"]:nth-child(2) {
+    flex: 0 0 32% !important;
+    max-width: 32% !important;
+    min-width: 32% !important;
+    padding: 0.5rem 0.25rem !important;
+    float: none !important;
+    display: block !important;
+  }
+
+  /* Better text sizing */
+  .matchup-horizontal .stat-value {
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .matchup-horizontal .farmer-breakdown {
+    max-height: 100px !important;
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    padding: 0.25rem !important;
+  }
+
+  /* Plant container with adequate size */
+  .matchup-horizontal .plant-container {
+    height: 180px !important;
+    min-height: 180px !important;
+    width: 100% !important;
+    margin: 10px auto !important;
+  }
+
+  .matchup-horizontal .plant-stage {
+    font-size: 0.75em !important;
+  }
+
+  .matchup-horizontal .timer-text {
+    font-size: 1.4rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .matchup-horizontal h5 {
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .matchup-horizontal h6 {
+    font-size: 0.9rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .matchup-horizontal .badge {
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.5rem !important;
+    margin: 0.1rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .matchup-horizontal .card-body {
+    padding: 0.75rem 0.5rem !important;
+  }
+
+  .matchup-horizontal .progress {
+    height: 10px !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .matchup-horizontal .small {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Center column improvements */
+  .matchup-horizontal .d-flex.align-items-center.justify-content-center {
+    padding: 0.75rem 0 !important;
+  }
+}
+
+/* Accessibility Enhancements */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid var(--farmington-orange);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .btn,
+  .card-footer {
+    display: none !important;
+  }
+
+  .card {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* PWA Standalone Mode Styles */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .navbar {
+    padding-top: calc(0.5rem + env(safe-area-inset-top));
+  }
+
+  /* Hide install banners when in standalone mode */
+  #install-banner,
+  #ios-install-modal {
+    display: none !important;
+  }
+}
+
+/* iOS Safari specific adjustments */
+@supports (-webkit-touch-callout: none) {
+  .navbar {
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+  }
+
+  .container-fluid {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Install banner styles */
+#install-banner {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* PWA splash screen improvements */
+.pwa-splash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--farmington-green);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Loading Spinner */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--text-muted);
+  border-radius: 50%;
+  border-top-color: var(--farmington-orange);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.text-farmington-green { color: var(--farmington-green) !important; }
+.text-farmington-brown { color: var(--farmington-brown) !important; }
+.text-farmington-gold { color: var(--farmington-gold) !important; }
+.text-farmington-orange { color: var(--farmington-orange) !important; }
+
+.bg-farmington-green { background-color: var(--farmington-green) !important; }
+.bg-farmington-brown { background-color: var(--farmington-brown) !important; }
+.bg-farmington-gold { background-color: var(--farmington-gold) !important; }
+.bg-farmington-orange { background-color: var(--farmington-orange) !important; }
+
+.border-farmington-green { border-color: var(--farmington-green) !important; }
+.border-farmington-brown { border-color: var(--farmington-brown) !important; }
+.border-farmington-gold { border-color: var(--farmington-gold) !important; }
+.border-farmington-orange { border-color: var(--farmington-orange) !important; }
+
+/* Market farmer cards */
+.farmer-market-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.farmer-market-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Dashed border for empty positions */
+.border-dashed {
+    border: 2px dashed #dee2e6 !important;
+    background-color: #f8f9fa;
+}
+
+/* Plant Growth Animation Styles */
+.plant-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(to top, #8B4513 10%, #87CEEB 10%);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.plant-stage {
+    transition: all 0.5s ease-in-out;
+    animation: gentle-sway 3s ease-in-out infinite;
+}
+
+@keyframes gentle-sway {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+}
+
+/* Matchup UI Enhancements */
+.farmer-breakdown {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.farmer-breakdown::-webkit-scrollbar {
+    width: 4px;
+}
+
+.farmer-breakdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.farmer-breakdown::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+.farmer-breakdown::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Win Probability Styling */
+.win-probability {
+    background: linear-gradient(45deg, rgba(40, 167, 69, 0.1), rgba(40, 167, 69, 0.2));
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive matchup cards */
+@media (max-width: 768px) {
+    .plant-container {
+        height: 120px !important;
+        width: 150px !important;
+    }
+
+    .plant-stage {
+        font-size: 0.8em;
+    }
+}
+
+/* Farmer image styling - prevent cropping */
+.card-img-top,
+.farmer-card img,
+.farmer-preview-card img,
+.farmer-market-card img {
+  object-fit: contain !important;
+  background-color: var(--bg-secondary);
+}
+
+/* Mobile profile images - better sizing */
+.matchup-horizontal .rounded-circle {
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: cover !important;
+}
+
+/* Add any additional styles here */

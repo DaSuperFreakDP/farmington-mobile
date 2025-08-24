@@ -1,0 +1,303 @@
+
+[
+    {
+        "id": 1,
+        "name": "Josh",
+        "strength": 1,
+        "handy": 10,
+        "stamina": 6,
+        "physical": 6,
+        "image": "/static/images/farmers/josh.png",
+        "crop_preferences": {
+            "summer": "tomatoes",
+            "fall": "apples", 
+            "winter": "kale",
+            "spring": "lettuce"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Zach",
+        "strength": 5,
+        "handy": 4,
+        "stamina": 10,
+        "physical": 8,
+        "image": "/static/images/farmers/zach.png",
+        "crop_preferences": {
+            "summer": "corn",
+            "fall": "pumpkins",
+            "winter": "brussels_sprouts",
+            "spring": "radishes"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Tyler",
+        "strength": 10,
+        "handy": 3,
+        "stamina": 8,
+        "physical": 10,
+        "image": "/static/images/farmers/tyler.jpg",
+        "crop_preferences": {
+            "summer": "peppers",
+            "fall": "squash",
+            "winter": "potatoes", 
+            "spring": "peas"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Tyrone",
+        "strength": 4,
+        "handy": 9,
+        "stamina": 7,
+        "physical": 9,
+        "image": "/static/images/farmers/tyrone.png",
+        "crop_preferences": {
+            "summer": "watermelon",
+            "fall": "sweet_potatoes",
+            "winter": "onions",
+            "spring": "strawberries"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Luke",
+        "strength": 10,
+        "handy": 3,
+        "stamina": 6,
+        "physical": 7,
+        "image": "/static/images/farmers/luke.png",
+        "crop_preferences": {
+            "summer": "watermelons",
+            "fall": "cranberries",
+            "winter": "winter_wheat",
+            "spring": "spinach"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Vrock",
+        "strength": 4,
+        "handy": 5,
+        "stamina": 5,
+        "physical": 6,
+        "image": "/static/images/farmers/vrock.png",
+        "crop_preferences": {
+            "summer": "zucchini",
+            "fall": "carrots", 
+            "winter": "cabbage",
+            "spring": "asparagus"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Jared",
+        "strength": 5,
+        "handy": 8,
+        "stamina": 10,
+        "physical": 8,
+        "image": "/static/images/farmers/jared.png",
+        "crop_preferences": {
+            "summer": "tomatoes",
+            "fall": "pumpkins",
+            "winter": "kale",
+            "spring": "lettuce"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Mezzy",
+        "strength": 8,
+        "handy": 10,
+        "stamina": 8,
+        "physical": 8,
+        "image": "/static/images/farmers/mezzy.png",
+        "crop_preferences": {
+            "summer": "corn",
+            "fall": "apples",
+            "winter": "brussels_sprouts",
+            "spring": "radishes"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Morris",
+        "strength": 7,
+        "handy": 3,
+        "stamina": 4,
+        "physical": 6,
+        "image": "/static/images/farmers/morris.png",
+        "crop_preferences": {
+            "summer": "peppers",
+            "fall": "squash",
+            "winter": "potatoes",
+            "spring": "peas"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Hunter",
+        "strength": 6,
+        "handy": 6,
+        "stamina": 6,
+        "physical": 5,
+        "image": "/static/images/farmers/hunter.png",
+        "crop_preferences": {
+            "summer": "cucumbers",
+            "fall": "sweet_potatoes", 
+            "winter": "onions",
+            "spring": "strawberries"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Nelson",
+        "strength": 4,
+        "handy": 8,
+        "stamina": 4,
+        "physical": 7,
+        "image": "/static/images/farmers/nelson.png",
+        "crop_preferences": {
+            "summer": "watermelons",
+            "fall": "cranberries",
+            "winter": "winter_wheat",
+            "spring": "spinach"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Dante",
+        "strength": 5,
+        "handy": 4,
+        "stamina": 5,
+        "physical": 7,
+        "image": "/static/images/farmers/dante.png",
+        "crop_preferences": {
+            "summer": "zucchini",
+            "fall": "carrots",
+            "winter": "cabbage",
+            "spring": "asparagus"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Christian",
+        "strength": 4,
+        "handy": 4,
+        "stamina": 5,
+        "physical": 9,
+        "image": "/static/images/farmers/christian.png",
+        "crop_preferences": {
+            "summer": "tomatoes",
+            "fall": "apples",
+            "winter": "kale", 
+            "spring": "lettuce"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Marc-Anthony",
+        "strength": 5,
+        "handy": 4,
+        "stamina": 4,
+        "physical": 6,
+        "image": "/static/images/farmers/marc.png",
+        "crop_preferences": {
+            "summer": "corn",
+            "fall": "pumpkins",
+            "winter": "brussels_sprouts",
+            "spring": "radishes"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Daniel",
+        "strength": 5,
+        "handy": 4,
+        "stamina": 8,
+        "physical": 7,
+        "image": "/static/images/farmers/daniel.png",
+        "crop_preferences": {
+            "summer": "peppers",
+            "fall": "squash",
+            "winter": "potatoes",
+            "spring": "peas"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Nick Rebello",
+        "strength": 7,
+        "handy": 1,
+        "stamina": 4,
+        "physical": 6,
+        "image": "/static/images/farmers/rebello.png",
+        "crop_preferences": {
+            "summer": "cucumbers",
+            "fall": "sweet_potatoes",
+            "winter": "onions",
+            "spring": "strawberries"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Kieran Richards",
+        "strength": 3,
+        "handy": 5,
+        "stamina": 6,
+        "physical": 3,
+        "image": "/static/images/farmers/kieran.png",
+        "crop_preferences": {
+            "summer": "watermelons",
+            "fall": "cranberries",
+            "winter": "winter_wheat",
+            "spring": "spinach"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Andre",
+        "strength": 4,
+        "handy": 8,
+        "stamina": 3,
+        "physical": 4,
+        "image": "/static/images/farmers/andre.png",
+        "crop_preferences": {
+            "summer": "zucchini",
+            "fall": "carrots",
+            "winter": "cabbage",
+            "spring": "asparagus"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Michael",
+        "strength": 5,
+        "handy": 5,
+        "stamina": 5,
+        "physical": 9,
+        "image": "/static/images/farmers/michael.png",
+        "crop_preferences": {
+            "summer": "tomatoes",
+            "fall": "apples",
+            "winter": "kale",
+            "spring": "lettuce"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Duzzi",
+        "strength": 9,
+        "handy": 3,
+        "stamina": 3,
+        "physical": 10,
+        "image": "/static/images/farmers/duzzi.jpg",
+        "crop_preferences": {
+            "summer": "corn",
+            "fall": "pumpkins",
+            "winter": "brussels_sprouts", 
+            "spring": "radishes"
+        }
+    }
+]

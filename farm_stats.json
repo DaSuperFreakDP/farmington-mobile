@@ -1,0 +1,19 @@
+{
+    "users": {
+        "ty": {
+            "matchday": 0,
+            "drafted_team": {},
+            "data": []
+        },
+        "jared": {
+            "matchday": 0,
+            "drafted_team": {},
+            "data": []
+        },
+        "bob": {
+            "matchday": 0,
+            "drafted_team": {},
+            "data": []
+        }
+    }
+}
